@@ -1,0 +1,579 @@
+%%%%%%%%%%%%%Chapter-1%%%%%%%%%%%%%%%%%
+
+
+\chapter{فضاهای اندازه}
+
+
+
+\section{اندازه‌ی لبگ یک بعدی}
+ 
+ فرض کنیم که 
+$(a, b)$ 
+ یک بازه‌ی باز در 
+ $\R$ 
+ باشد. حال اندازه‌ی لبگ آن را قرار می‌دهیم:
+\begin{align*}
+I=(a, b) \hspace{2cm} \lambda(I) := b - a
+ \end{align*}
+ 
+ و برای هر مجموعه‌ی باز دلخواه دیگر مانند 
+ $ G \subseteq \R$
+ قرار می‌دهیم:
+ \begin{equation*}
+ \lambda(G) = \sum_{k \in \N} \lambda(I_{k}) 
+ \end{equation*}
+ 
+ که در آن‌ها 
+ $ \lbrace I_k \rbrace $
+ ها بازه‌هایی هستند که مجموعه‌ی باز 
+ $ G $
+ را به وجود می‌آورند. اگر یکی از آنها نامتناهی باشد، آنگاه می‌گوییم که 
+ $ \lambda(G) = $
+ اندازه‌ی لبگ 
+ $ G $
+ بی‌نهایت است. و اگر 
+ $ G \neq \phi $
+، آنگاه 
+$ \lambda(G) = 0 $
+در ادامه اگر 
+$ E $
+مجموعه‌ای بسته و کراندار باشد و 
+$ [a, b] $
+کوچکترین بازه‌ی ؟ 
+$ E $
+آنوقت اندازه ی لبگ 
+$ \lambda $
+در ؟ زیر صدق می‌کند.
+\begin{equation*}
+\lambda(E) = b - a - \lambda ((a, b) \ E ) 
+\end{equation*}
+و یا
+\begin{equation*}
+\lambda(E) + \lambda ((a, b) \ E) = b - a 
+\end{equation*}
+
+\begin{definition}[\bf اندازه‌ی خارجی لبگ یک بعدی]
+فرض کنیم که 
+$ E $
+مجموعه‌ای دلخواه از 
+$ \R $
+باشد. حال اندازه‌ی خارجی آن را با نماد 
+$ {\lambda}*(E) $
+نشان می‌دهیم و عبارت است از 
+\begin{equation*}
+{\lambda}*(E) = \inf \lbrace \lambda(G) \vert E \subset G , G \rbrace 
+\end{equation*}
+و یا با توجه به تعریف:
+\begin{align}
+= \inf \lbrace \sum_{k = 1}^{\infty} \lambda(I_k) : E \subset \bigcup_{k = 1}^{\infty} I_k , ? \rbrace \nonumber
+\end{align}
+\end{definition}
+
+\begin{remark}[\bf تمرین]
+تعریف بالا خوشتعریف بوده و اگر
+$ E_1 \subset E_2 $
+آنگاه 
+$ {\lambda}*(E_1) \leq {\lambda}*(E_2) $
+خاصیت 
+$ monotonicity $ 
+صدق می‌کند.
+
+\end{remark}
+\begin{remark}
+اگر 
+$E$
+یک بازه‌ی باز یا شبه باشد، می‌توان نشان داد که 
+$ {\lambda}*(E) = \lambda(E) $
+است.
+\end{remark}
+\begin{remark}
+$ {\lambda}* $
+تعریف شده در بالا اگر 
+$ E_1 $
+و 
+$ E_2 $
+دو مجموعه‌ی مجزا باشد، آنگاه نمی‌توان گفت که 
+\begin{align}
+{\lambda}*(E_{1} \cup E_{2}) = {E_1}* + {E_2}* \nonumber
+\end{align}
+(ممکن است یکی از 
+$ E_i $
+ها اندازه‌پذیر لبگ نباشد.(
+\end{remark}
+\begin{definition}[\bf اندازه‌ی درونی لبگ یک بعدی]
+فرض کنیم که 
+$ E \subseteq \mathbb{R} $
+باشد. حال قرار می‌دهیم
+\begin{align}
+{\lambda}_*(E) = \sup \lbrace \lambda(F) \mid F \subset E ,  F \rbrace \nonumber
+\end{align}
+(
+$ \lambda(F) $
+تعریف می‌شود زیرا فشرده است و با بازها پوشیده شده است.)
+\end{definition}
+\begin{remark}
+اندازه‌ی درونی تعریف شده در صفحه ی قبل در خاصیت 
+$ monotone $
+صدق می‌کند یعنی اگر 
+\begin{equation*}
+E_1 \subset E_2 \ \ \Rightarrow \ \ {\lambda}_*(E_1) \leq {\lambda}_*(E_2)
+\end{equation*}
+\end{remark}
+\begin{example}
+فرض کنید که 
+$ E = Q \cap [0, 1] $
+ثابت کنید که 
+$ {\lambda}^*(E) = 0 $
+میشود.
+\end{example}
+برای این منظور فرض کنیم که
+$ 0 = q_{0}, q_{1}, q_{2}, ... $
+همه ی اعداد گویا در بازه‌ی 
+$ [0, 1] $
+باشند، به وضوح شمارش پذیر می‌باشند. لذا آنها را در دنباله‌ی 
+$ {\lbrace q_n \rbrace}_{n = 1}^{\infty} $
+قرار می‌دهیم. حال 
+\begin{align}
+\forall n \in \mathbb{N} \ \ \ I_n := (q_n - \frac{\epsilon}{2^n}, q_n + \frac{\epsilon}{2^n}) \ \ \ \lambda(I_n) = \frac{2 \epsilon}{2^n} = \frac{\epsilon}{2^{n - 1}} \nonumber
+\end{align}
+\begin{equation*}
+\Rightarrow \forall \epsilon \> 0  \ \ \ \exists {\lbrace I_n \rbrace}_{n = 1}^{\infty}  s.t  E \subset \bigcup_{n = 1}^{\infty} I_n 
+\end{equation*}
+\begin{align}
+{\lambda}*(E) \leq \lambda(\bigcup_{n = 1}^{\infty} I_n) = \sum_{n = 1}^{\infty} \lambda(I_n) = \epsilon \sum \frac{1}{2^{n - 1}} < \epsilon \nonumber
+\end{align}
+\begin{equation*}
+ {\lambda}*(E) < \epsilon \Rightarrow {\lambda}*(E) = 0
+\end{equation*}
+\begin{definition}[\bf جبر]
+فرض کنیم که 
+$ X $
+یک مجموعه‌ی دلخواه باشد. حال یک خانواده از زیر مجموعه‌های 
+$ X $
+مانند 
+$ \mathcal{A} $
+را یک جبر برای 
+$ X $
+می‌گویند هرگاه در شرایط زیر صدق کند.
+\begin{itemize}
+\item [الف]$X \in \mathcal{A} \ \ \ (\varphi \in \mathcal{A}) $
+\item [ب] $A \in \mathcal{A} \Rightarrow {A}^c = X \backslash A \in \mathcal{A}$ 
+\item [ج] $if A, B \in \mathcal{A} \Rightarrow A \cup B \in \mathcal{A} $
+\end{itemize}
+و نتیجه می‌دهد 
+\begin{equation*}
+\bigcup^{n}_{i = 1} A_i \in \mathcal{A} \ \ \ if A_i \in \mathcal{A}
+\end{equation*}
+\end{definition}
+\begin{definition}[\bf $ \sigma $- جبر]
+خانواده‌ی 
+$ \mathcal{A} $ 
+از زیر‌ مجموعه‌های 
+$ X $
+را یک 
+$ \sigma $-
+جبر برای
+$ X $
+هرگاه 
+$ \mathcal{A} $
+یک جبر بوده و در شرط زیر صدق کند
+\begin{equation*}
+\forall \ \ \ \lbrace A_i \in \mathcal{A} : i \in \mathbb{N} \rbrace \ \ \bigcup^{\infty}_{i = 1} A_i \in \mathcal{A}
+\end{equation*}
+نسبت به اجتماع شمارش‌پذیر اعضا بسته باشد.
+\end{definition}
+\begin{remark}
+با توجه به این که در جبر و 
+$ \sigma $-
+جبر ؟ دو عنصر موجود است می‌توان گفت که در اشتراک تعداد متناهی اعضا نیز وجود دارد زیرا 
+\begin{equation*}
+if \ \ A_i \in \mathcal{A} \ \ 1 \leq i \leq n \ \Rightarrow A_i^c \in \mathcal{A} \Rightarrow \bigcup^{n}_{i = 1} A_i^c \in \mathcal{A}
+\end{equation*}
+و یا
+\begin{equation*}
+(\cap A_i)^c \in \mathcal{A} \Rightarrow {(\cap A_i)^c}^c \in \mathcal{A} \ \ or \ \ A_i \in \mathcal{A}
+\end{equation*}
+به‌ همین ترتیب می‌توان نشان داد که در 
+$ \sigma $-
+جبر
+\begin{equation*}
+if \ \ \ {\lbrace A_i \rbrace}^{\infty}_{i = 1} \in \mathcal{A} \Rightarrow \bigcap^{\infty}_{i = 1} A_i \in \mathcal{A}
+\end{equation*}
+\end{remark}
+\begin{example}
+کوچکترین جبر برای مجموعه‌ی 
+$ X $ 
+عبارت است از 
+$ \lbrace \phi , x \rbrace $
+و بزرگترین جبر و یا
+$ \sigma $-
+جبر برای آن عبارت است از 
+$ 2^X $
+و یا همان
+$ \rho(X) $
+\end{example}
+\begin{example}
+اگر 
+$ X $
+یک مجموعه‌ی دلخواه باشد ناشمارا و قرار دهیم 
+\begin{equation*}
+\mathcal{A} = \lbrace E \subset X : ? \rbrace
+\end{equation*}
+آنگاه 
+$ \mathcal{A} $ 
+در بالا یک 
+$ \sigma $-
+جبر می‌باشد. خواص زیر را چک می کنیم:
+\begin{equation*}
+\begin{split}
+1 : & \ \ X^c = \phi \ \ \ \textit{شمارش پذیر} \Rightarrow X \in \mathcal{A} \\
+2 : & \ \ if \ \ A \in \mathcal{A} \Rightarrow \textit{شمارش پذیر} A^c \textit{یا} A \ \ \Rightarrow \textit{شمارش پذیر} A \textit{و یا} A^c \ \ \Rightarrow A^c \in \mathcal{A} \\
+3 : & \ \ if \ \ A_i \in \mathcal{A} \ \ \Rightarrow \textit{شمارش پذیر} A_i^c \textit{و یا} A_i 
+\end{split}
+\end{equation*}
+حال چرا 
+$ \bigcup^{\infty}_{i = 1} A_i $
+شمارش پذیر است؟
+
+$ \bigcup A_i $
+ها اگر شمارش پذیر باشند آنگاه همه‌ی 
+$ A_i $
+ها شمارش پذیرند در غیر این صورت
+\begin{equation*}
+\begin{split}
+\exists k \ \ \ s.t \ \ 1 \leq k \leq n \ \ \ \textit{شمارش ناپذیر} A_k^c  \longrightarrow \ \ \textit{چون} A_k \in \mathcal{A} \ \ \Rightarrow \textit{باید} A^{c}_{k} \in \mathcal{A} 
+\end{split}
+\end{equation*}
+یعنی 
+$ A_k^c $
+شمارش پذیر است. حال 
+\begin{equation*}
+{(\bigcup^{\infty}_{i = 1} A_i)}^c =  \bigcap^{\infty}_{i = 1}A_i^c  \subseteq A_k^c
+\end{equation*}
+و 
+$ A_k^c $
+شمارش پذیر بود لذا باید 
+$ (\bigcup^{\infty}_{i = 1} A_i)^c $
+شمارش پذیر باشد و این می‌گوید که 
+$ \mathcal{A} $
+یک 
+$ \sigma $-
+جبر می‌باشد. 
+\end{example}
+
+\title{
+$  \sigma $-
+جبر تولید شده توسط یک زیر مجموعه از 
+$ X $ :
+}
+
+به راحتی می‌توان دید که اگر 
+$ \mathcal{A} $
+و 
+$ \mathcal{B} $
+دو 
+$ \sigma $-
+جبر باشند آن‌وقت 
+$ \mathcal{A} \cap \mathcal{B} $
+نیز یک 
+$ \sigma $- 
+جبر بر روی مجموعه‌ی 
+$ X $
+خواهد بود. لذا به طور استاندارد اگر 
+$ E \subset X $
+یک زیر مجموعه‌ی دلخواه باشد، 
+$\sigma $- 
+جبر تولید شده توسط خانواده‌ی 
+$ E $
+عبارت است از اشتراک تمامی 
+$ \sigma $-
+جبرهای که شامل 
+$ E $
+هستند یعنی 
+\begin{equation*}
+E \textit{-جبر تولید شده توسط}\sigma = \bigcap_{\mathcal{A} \textit{یک} {\sigma}-\textit{جبر و} E \subseteq \mathcal{A} \textit{است}} \mathcal{A}
+\end{equation*}
+\begin{remark}
+اگر 
+$ \mathcal{A}_1 $
+و 
+$ \mathcal{A}_2 $
+$ \sigma $-
+جبر باشد لزومی ندارد اجتماع آنها 
+$ \sigma $-
+جبر شود.
+\end{remark}
+برای مثال اگر 
+$ X $
+دلخواه و 
+$ A \subseteq X $ 
+یک زیرمجموعه‌ی دلخواه باشد،
+$ \sigma $-
+جبر تولید شده توسط 
+$ A $
+عبارت است از 
+\begin{equation*}
+A \textit{ توسط تولیدی -جبر} \sigma \mathcal{A} = \lbrace X, {\phi}, A, A^c \rbrace
+\end{equation*}
+\begin{definition}[\bf اندازه]
+فرض کنیم که 
+$ \mathcal{A} $
+یک
+$ \sigma $-
+جبر روی مجموعه‌ی 
+$ X $
+باشد. حال تابعی چون 
+$ \mu : \mathcal{A} \rightarrow [0, \infty] $ 
+را که دارای خواص زیر است، یک اندازه روی 
+$ \mathcal{A} $
+گویند.
+\begin{equation*}
+\begin{split}
+1 : & \mu (\phi) = 0 \\
+2: & \mu (\bigsqcup_{i \textit{شمارا}} A_i) = \sum_{i \textit{شمارا}} \mu (A_i) \ \ \ \ A_i \in \mathcal{A} 
+\end{split}
+\end{equation*}
+\end{definition}
+اعضای 
+$ \mathcal{A} $
+را نسبت به 
+$ \mu $
+اندازه‌پذیر گویند و یه سه تایی 
+$ (X, \mathcal{A}, \mu) $
+یک فضای اندازه می‌گوییم.
+\begin{remark}
+در بعضی از موارد به 
+$ (X, \mathcal{A}) $
+فضای اندازه‌پذیر و به 
+$ (X, \mathcal{A}, \mu) $
+فضای اندازه‌ی ؟ نیز گویند.
+\end{remark}
+\begin{remark}
+اگر 
+$ \mu(X) < \infty $
+شود، اندازه‌ی 
+$ \mu $
+متناهی نامیده می‌شود و اگر 
+$ \mu (X) = 1 $
+باشد به آن یک فضای احتمال می‌گوییم در حالتی که 
+\begin{equation*}
+\exists E_i \in \mathcal{A} \ \ s.t \ \ \mu (E_i) < \infty , X = \bigcup^{\infty}_{i = 1} E_i
+\end{equation*}
+آن‌وقت گوییم که 
+$ \mu $
+یک فضای اندازه‌ی 
+$ \sigma $-
+متناهی می‌باشد. در حالت کلی‌تر مجموعه‌ی 
+$ E $
+را نسبت به 
+$ \mu $،
+$ \sigma $-
+متناهی گویند. اگر بتوان 
+$ E $
+را به صورت اجتماع مجموعه‌های  با اندازه‌ی متناهی نوشت، توجه می‌کنیم که اگر به ازای هر
+$ E \in \mathcal{A} $
+که 
+$ \mu (X) = \infty $، 
+مجموعه‌ای چون 
+$ F \in \mathcal{A} $
+موجود باشد که 
+$ F \subset E $
+و 
+$ 0 < \mu (F) < \infty $
+آنگاه 
+$ \mu $
+را نیمه متناهی گویند و می‌توان نشان داد که هر اندازه‌ی 
+$ \sigma $-
+متناهی، نیمه متناهی می‌باشد ولی عکس آن برقرار نمی‌باشد. (مثال پیدا کنید)
+\end{remark}
+ نتایجی که از یک تابع اندازه می‌توان گرفت فرض کنیم که 
+$ (X, \mathcal{M}, \mu) $ 
+یک فضای اندازه باشند. آنگاه دارایی خواص زیر را به راحتی می‌توان چک کرد.
+\begin{equation*}
+\begin{split}
+1 : & if \ \ A, B \in \mathcal{M}, \ \ A \subset B \Rightarrow \mu(A) \leq \mu(B) \\
+2 : & \mu (A \cup B) + \mu (A \cap B) = \mu(A) + \mu(B) \ \ \ \forall A, B \in \mathcal{M} \\
+3 : & \mu(X \backslash A) = \mu(X) - \mu(A) \\
+4 : & \forall A_i \in \mathcal{M}  \Rightarrow \mu(\bigcup_{i = 1}^{\infty}) \leq \sum_{i = 1}^{\infty} \mu(A_i) 
+\end{split}
+\end{equation*}
+
+\begin{remark}
+\begin{equation*}
+\begin{split}
+\bigcup B_i = \bigcup A_i \ \ if  B_1 = A_1, \ \ B_2 = A_2 \backslash A_1, \ \ B_3 = A_3 \backslash A_2 = A_3 \backslash (A_1 \cup A_2), \ldots \\
+\bigcup B_i \in \mathcal{M} \ \ \ \mu(\bigcup B_i) = \sum^{\infty}_{i = 1} \mu(B_i) \leq \sum^{\infty}_{i = 1} \mu(A_i) ( B_i \subseteq A_i \Rightarrow \mu(B_i) \leq \mu(A_i)) \\
+\end{split}
+\end{equation*}
+\end{remark}
+
+\begin{theorem}
+فرض کنیم که 
+$ (X, \mathcal{M}, \mu) $
+یک فضای اندازه و 
+$\{ A_i \}\subset \mathcal M$
+دنباله‌ای از مجموعه های اندازه پذیر باشد، آنگاه:
+\begin{itemize}
+\item[{[{\bf 1}]}]
+اگر $\{A_i\}$ یک دنباله صعودی نسبت به رابطه شمول باشد، یعنی
+$A_1 \subset A_2 \subset A_3 \subset \ldots $
+آنگاه 
+\begin{align*}
+\lim_{n \to \infty} \mu(A_n) &= \mu\Big(\lim_{n \to \infty} A_n\Big)\\
+& = \mu\Big(\bigcup_{n = 1}^{\infty} A_n\Big)
+\end{align*}
+\item[{[{\bf 2}]}]
+اگر $\{A_i\}$ یک دنباله نزولی نسبت به رابطه شمول باشد، یعنی
+$A_1 \supset A_2 \supset A_3 \supset \ldots $
+و $\mu(A_m)<\infty$ برای یک اندیس مانند $m\in\N$، آنگاه 
+\begin{align*}
+\lim_{n \to \infty} \mu(A_n) &= \mu\Big(\lim_{n \to \infty} A_n\Big)\\
+& = \mu\Big(\bigcap_{n = 1}^{\infty} A_n\Big)
+\end{align*}
+\end{itemize}
+\end{theorem}
+
+\pf
+قرار می‌دهیم 
+$ A := \bigcup_{i = 1}^{\infty} A_i $
+بدیهی است که 
+\begin{equation*}
+\begin{split}
+A = A_1 \sqcup (A_2 \backslash A_1) \sqcup (A_3 \backslash (A_1 \cup A_2)) \sqcup \ldots \Rightarrow \\
+A = (A_1 \backslash A_0) \sqcup (A_2 \backslash A_1) \sqcup (A_3 \backslash A_2) \sqcup \ldots \\
+\end{split}
+\end{equation*}
+توجه کنیم که ؟ ها مجزا از یکدیگر می باشند. بنابر خاصیت صعودی مجموعه ها حال:
+\begin{equation*}
+\begin{split}
+\mu(A) =& \mu(\bigcup_{i = 1}^{\infty} (A_i \backslash A_{i-1})) = \sum_{i = 1}^{\infty} \mu(A_i \backslash A_{i - 1}) \\
+           =& \sum_{i = 1}^{\infty} \mu(A_i) - \mu(A_{i - 1}) = \mu(A_0) - \mu(A_1) + \ldots + \mu(A_{n - 1}) - \mu(A_n) \\
+           =& \mu(\bigcup_{i = 1}^{\infty} A_i) = \lim_{n \rightarrow \infty} \mu(A_n) \\
+\end{split}
+\end{equation*}
+
+(توجه : اگر
+$ A \subseteq B $
+باشد، آنوقت:
+$ \mu(B \backslash A) = \mu(B) - \mu(A) $
+)
+
+\pf
+رقسمت دوم: برای ؟ قرار می‌دهیم
+$ B_n := A_m \backslash A_n \textit{یا} A_m \cap A_n^c $
+چون 
+$ A_1^c \subset A_2^c \subset \ldots $
+به وضوح
+$ B_1 \subset B_2 \subset B_3 \subset \ldots $
+از طرفی برای هر 
+$ n \leq m $:
+\begin{equation*}
+\mu(B_n) = \mu(A_m \backslash A_n) = \mu(A_m) - \mu(A_n)
+\end{equation*} 
+توجه می‌کنیم که 
+$ \mu(\bigcap A_i) \leq \mu(A_n) \leq \mu(A_m) < \infty $:
+\begin{equation*}
+\begin{split}
+\lim_{n \rightarrow \infty} \mu(B_n) = \mu(\bigcup_{n = 1}^{\infty} B_n) = \mu(\bigcup_{n = 1}^{\infty} (A_m \cap A_n^c)) \\
+\lim_{n \rightarrow \infty} [\mu(A_m) - \mu(A_n)] = \mu(A_m \cap (\bigcup_{n = 1}^{\infty} A_n^c)) = \mu(A_m \backslash (\bigcap_{n = 1}^{\infty} A_n)) \\
+\Rightarrow \mu(A_m) - \lim_{n \rightarrow \infty} \mu(A_n) = \mu(A_m) - \mu(\bigcap_{n = 1}^{\infty} A_n) \\
+\Rightarrow \lim_{n \rightarrow \infty} \mu(A_n) = \mu(\bigcap_{n = 1}^{\infty} A_n)
+\end{split}
+\end{equation*}
+
+\begin{example}[\bf اندازه]
+فرض کنیم که 
+$ (X, \mathcal{M}) $
+یک 
+$ \sigma $-
+جیر باشد، حال 
+$ \mu $
+به صورت زیر یک اندازه است:
+\begin{equation*}
+\begin{split}
+\forall A \in \mathcal{M} \ \ \ \mu(A) := ? \\
+X \neq \phi , a_0 \in X \ \ \ \mu(A) = 
+\end{split}
+\end{equation*}
+\end{example}
+\begin{example}
+برای 
+$ f \geq 0 $
+انتگرال‌پذیر و 
+$ (X, \mathcal{M}, \mu) $
+را به صورت زیر تعریف می‌کنیم:
+\begin{equation*}
+A \in \mathcal{M} \ \ \ \ \mu(A) := \int_{A} f dx
+\end{equation*}
+\end{example}
+
+\begin{definition}
+فرض کنیم که 
+$ \lbrace A_n \rbrace $
+دنبالهای از زیر مجموعه‌های 
+$ X $
+باشد. تعریف می‌کنیم:
+\begin{equation*}
+\begin{split}
+\limsup A_n = \bigcap_{m = 1}^{\infty} (\bigcup_{n = m}^{\infty} A_n) = \overline{\lim} A_n \\
+\liminf A_n = \bigcup_{m = 1}^{\infty} (\bigcap_{n= m}^{\infty} A_n) = \underline{\lim} A_n \\
+\end{split}
+\end{equation*}
+اگر 
+$ A = \limsup_{n \rightarrow \infty} A_n = \liminf_{n \rightarrow \infty} A_n $
+باشد آنوقت گوییم که دنباله‌ی 
+$ \lbrace A_n \rbrace $
+همگرا به 
+$ A $
+می‌باشد و با علامت 
+$ \lim_{n \rightarrow \infty} A_n = A $
+نمایش داده می‌شود.
+\end{definition}
+
+\begin{remark}
+ثابت کنید که اگر 
+$ A_i \in \mathcal{M} $
+باشد، آنوقت 
+$ \limsup_{n \rightarrow \infty} A_n $
+و
+$ \liminf_{n \rightarrow \infty} A_n $
+دوباره در 
+$ \mathcal{M} $
+می‌باشند.
+\end{remark}
+
+\begin{recall}
+برای دنباله‌ی عددی 
+$ \lbrace x_n \rbrace_{n = 1}^{\infty} $
+نمادهای 
+$ \limsup_{n \rightarrow \infty} x_n $
+حد زبرین و
+$ \liminf_{n \rightarrow \infty} x_n $
+حد زیرین می‌باشند.
+\begin{equation*}
+\begin{split}
+\limsup_{n \rightarrow \infty} x_n = \overline{\lim_{n \rightarrow \infty}} x_n = \inf_{n} \sup_{m \geq n} x_m \\
+\liminf_{n \rightarrow \infty} x_n = \underline{\lim_{n \rightarrow \infty}} x_n = \sup_{n} \inf_{m \geq n} x_m \\
+\end{split}
+\end{equation*}
+خواص آن:
+\begin{equation*}
+\begin{split}
+1 :& \ \liminf_{n \rightarrow \infty} x_n \leq \limsup_{n \rightarrow \infty} x_n \\
+2 :& \ \liminf_{n \rightarrow \infty} x_n =  - \limsup_{n \rightarrow \infty} (- x_n) \\
+3 :& \ \liminf_{n \rightarrow \infty} x_n + \liminf_{n \rightarrow \infty} y_n \leq \liminf_{n \rightarrow \infty} (x_n + y_n) \\
+    &\leq \liminf_{n \rightarrow \infty} x_n + \limsup_{n \rightarrow \infty} y_n \leq \limsup_{n \rightarrow \infty} x_n + \limsup_{n \rightarrow \infty} y_n  \\
+\end{split}
+\end{equation*}
+\end{recall}
+
+\begin{lemma}[برل - کانتلی]
+فرض کنیم که 
+$ (X, \mathcal{M}, \mu) $
+فضای اندازه‌ای باشد که 
+$ A_i \in \mathcal{M} $
+و
+$ \sum_{i = 1}^{\infty} \mu(A_i) < \infty $
+آنگاه 
+$ \mu(\limsup_{n \rightarrow \infty} A_n) = 0 $
+\end{lemma}
